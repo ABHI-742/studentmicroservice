@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Cleaning old builds and packaging the application...'
-                sh 'mvn clean install -DskipTests'      // Build Spring Boot JAR
+                sh 'clean install -DskipTests'      // Build Spring Boot JAR
                 sh 'docker build -t $IMAGE_NAME:latest .'  // Build Docker image
             }
         }
