@@ -13,17 +13,7 @@ pipeline {
                 }
             }
         }
-
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building Docker image...'
-                script {
-                    // Build Docker image with the specified tag
-                    sh 'docker build -t $IMAGE_NAME:latest .'
-                }
-            }
-        }
-
+        
         stage('Push Image to Docker Hub') {
             steps {
                 echo 'Pushing the Docker image to DockerHub...'
