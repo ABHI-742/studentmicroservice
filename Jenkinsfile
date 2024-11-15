@@ -28,7 +28,7 @@ pipeline {
                 echo 'Deploying the application to Kubernetes...'
                 script {
                     // Update the deployment image and monitor the rollout
-                    sh 'kubectl set image deployment/swe645hw3deploy container-0=$IMAGE_NAME:latest -n default'
+                    sh 'kubectl set image deployment/swe645hw3deploy container-0=abhi7422/student_microservice:latest -n default'
                     sh 'kubectl rollout status deployment/swe645hw3deploy -n default'
                 }
             }
