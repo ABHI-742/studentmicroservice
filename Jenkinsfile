@@ -1,8 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub')  // DockerHub credentials in Jenkins
-        IMAGE_NAME = 'abhi7422/student_microservice'       // Docker image name
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')  // DockerHub credentials in Jenkins   
     }
     stages {
         stage('Login to Docker Hub') {
@@ -19,7 +18,7 @@ pipeline {
                 echo 'Pushing the Docker image to DockerHub...'
                 script {
                     // Push the Docker image to DockerHub
-                    sh 'docker push $IMAGE_NAME:latest'
+                    sh 'docker push abhi7422/student_microservice:latest'
                 }
             }
         }
