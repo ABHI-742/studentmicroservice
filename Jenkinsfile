@@ -1,21 +1,10 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven' // Replace 'Maven' with the name you configured
-    }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub') // DockerHub credentials in Jenkins
         IMAGE_NAME = 'abhi7422/student_microservice'           // Docker image name
     }
     stages {
-        stage('Build') {
-            steps {
-                echo 'Cleaning old builds and packaging the application...'
-                sh 'mvn clean install -DskipTests'      // Build Spring Boot JAR
-                sh 'docker build -t $IMAGE_NAME:latest .'  // Build Docker image
-            }
-        }
-
         stage('Login to Docker Hub') {
             steps {
                 echo 'Logging in to DockerHub...'
