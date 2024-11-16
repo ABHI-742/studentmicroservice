@@ -12,7 +12,10 @@ pipeline {
          stage('Build') {
             steps {
                 echo 'Cleaning and packaging the application...'
+                dir('/var/lib/jenkins/workspace/swe645hw3/studentSurveyMicroservice')
+                    {
                 sh 'mvn clean install -DskipTests' // Use Maven for build
+                    }
                 sh 'docker build -t $IMAGE_NAME:latest .' // Build Docker image
             }
         }
