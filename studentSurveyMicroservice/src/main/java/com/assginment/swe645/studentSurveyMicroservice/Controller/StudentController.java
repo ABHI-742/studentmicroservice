@@ -26,7 +26,7 @@ import com.assginment.swe645.studentSurveyMicroservice.Service.StudentService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/survey")
+@RequestMapping("/api/survey/test")
 @CrossOrigin
 public class StudentController {
 
