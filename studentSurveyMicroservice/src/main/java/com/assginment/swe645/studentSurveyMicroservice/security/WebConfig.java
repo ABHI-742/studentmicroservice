@@ -16,8 +16,8 @@ public class WebConfig {
                 registry.addMapping("/**")
                         .allowedOrigins("https://35.168.73.243/home") // Replace with your frontend URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowedHeaders("*");
+                        //.allowCredentials(true);
             }
         };
     }
