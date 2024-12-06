@@ -1,0 +1,5 @@
+package com.assginment.swe645.studentSurveyMicroservice.security;
+
+public class Authconfig {
+
+}
