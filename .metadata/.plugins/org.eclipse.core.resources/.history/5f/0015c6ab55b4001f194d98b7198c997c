@@ -27,7 +27,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/survey/test")
-//@CrossOrigin(origins={"https://35.168.73.243/home","http://localhost:8082/"})
+@CrossOrigin(origins={"https://35.168.73.243/home","http://localhost:8082/"})
 public class StudentController {
 
     @Autowired
