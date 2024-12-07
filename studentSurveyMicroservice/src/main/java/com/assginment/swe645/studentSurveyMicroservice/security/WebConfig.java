@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://35.168.73.243") // Replace with your frontend URL
+                        .allowedOrigins("https://35.168.73.243/home") // Replace with your frontend URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true); // If you need to send cookies or JWT headers
